@@ -9,7 +9,7 @@ app.use(cors());
 const PORT = process.env.PORT;
 
 app.post("/create-checkout-session", async (req, res) => {
-    const {product} = req.body;
+    const {products} = req.body;
 
     const lineItems = products.map((product) => ({
         price_data: {
